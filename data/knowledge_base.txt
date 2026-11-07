@@ -1,0 +1,9 @@
+Campus Café es una aplicación de pedidos para una cafetería universitaria.
+El catálogo de Campus Café contiene productos con identificador, nombre, precio y disponibilidad.
+Los usuarios autenticados pueden crear pedidos y consultar sus propios pedidos.
+Las solicitudes de creación de pedidos utilizan una clave de idempotencia para evitar duplicados cuando se reintenta una operación.
+La arquitectura de Campus Café utiliza AWS Lambda, API Gateway y DynamoDB.
+La autorización se basa en tokens JWT y permisos de alcance (scopes).
+Los precios se validan en el servidor; el cliente no determina el precio final.
+Un RAG combina recuperación de fragmentos relevantes con generación de respuestas mediante un modelo de lenguaje.
+Pinecone almacena vectores de embeddings y permite recuperar fragmentos semánticamente similares a una consulta.
